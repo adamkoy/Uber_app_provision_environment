@@ -4,7 +4,6 @@
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
-
 package 'nginx' do
   action :install
 end
@@ -16,4 +15,8 @@ end
 template "/etc/nginx/nginx.conf" do
   source "nginx.conf.erb"
   notifies :reload, "service[nginx]"
+end
+
+template "/etc/nginx/nginx.conf" do
+  source "nginx.conf.erb"
 end
