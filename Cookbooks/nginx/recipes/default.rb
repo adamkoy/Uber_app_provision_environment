@@ -12,11 +12,17 @@ service 'nginx' do
   action [ :enable, :start]
 end
 
-template "/etc/nginx/nginx.conf" do
-  source "nginx.conf.erb"
-  notifies :reload, "service[nginx]"
+link '/etc/nginx/sites-enabled/default' do
+   action :delete
+   notifies :restart, "service[nginx]"
+ end
+
+ template '/etc/nginx/sites-available/proxy.conf' do
+  source "proxy.conf.erb"
+  variables proxy_port: 3000
+  notifies :restart, 'service[nginx]'
 end
 
-template "/etc/nginx/nginx.conf" do
-  source "nginx.conf.erb"
+link '/etc/nginx/sites-enabled/proxy.conf' do
+  to "/etc/nginx/sites-available/proxy.conf.erb"
 end
