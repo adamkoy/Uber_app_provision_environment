@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/ubuntu/Uber_app":{"guestpath":"/home/ubuntu/Uber_app","hostpath":"C:/Users/AKoyuncu/Engineering3637/Project1/Uber_project/Vagrant_file/Uber_app","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/AKoyuncu/Engineering3637/Project1/Uber_project/Vagrant_file","disabled":false,"__vagrantfile":true}}}
