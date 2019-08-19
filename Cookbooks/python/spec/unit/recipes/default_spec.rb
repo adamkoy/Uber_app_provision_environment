@@ -15,9 +15,23 @@ describe 'python::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
+
     it 'installs the package python' do
       expect(chef_run).to install_package('python')
     end
+
+    it 'installs the package python-pip' do
+      expect(chef_run).to install_package('python-pip')
+    end
+
+    it 'installs the package libncurses5-dev' do
+      expect(chef_run).to install_package('libncurses5-dev')
+    end
+
+    it 'installs the package libffi-dev' do
+      expect(chef_run).to install_package('libffi-dev')
+    end
+
 
     it 'provides Flask plugin' do
         expect(chef_run).to run_execute('pip install Flask==0.10.1')
@@ -47,7 +61,7 @@ describe 'python::default' do
     it 'provides wsgiref plugin' do
       expect(chef_run).to run_execute('pip install wsgiref==0.1.2')
     end
-    
+
     it 'provides gunicorn plugin' do
       expect(chef_run).to run_execute('pip install gunicorn==18.0')
     end
