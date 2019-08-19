@@ -19,83 +19,40 @@ describe 'python::default' do
       expect(chef_run).to install_package('python')
     end
 
-    it 'provides Flask' do
+    it 'provides Flask plugin' do
         expect(chef_run).to run_execute('pip install Flask==0.10.1')
     end
-  end
+    it 'provides Jinja2 plugin' do
+        expect(chef_run).to run_execute('pip install Jinja2==2.7.3')
+   end
+    it 'provides MarkupSafe plugin' do
+      expect(chef_run).to run_execute('pip install MarkupSafe==0.23')
+    end
+    it 'provides Werkzeug plugin' do
+    expect(chef_run).to run_execute('pip install Werkzeug==0.9.6')
+   end
+    it 'provides gnureadline plugin' do
+      expect(chef_run).to run_execute('pip install gnureadline==6.3.3')
+    end
+    it 'provides itsdangerous plugin' do
+      expect(chef_run).to run_execute('pip install itsdangerous==0.24')
+    end
+    it 'provides rauth plugin' do
+      expect(chef_run).to run_execute('pip install rauth==0.7.0')
+    end
+    it 'provides requests plugin' do
+      expect(chef_run).to run_execute('pip install requests==2.3.0')
+    end
+
+    it 'provides wsgiref plugin' do
+      expect(chef_run).to run_execute('pip install wsgiref==0.1.2')
+    end
+    
+    it 'provides gunicorn plugin' do
+      expect(chef_run).to run_execute('pip install gunicorn==18.0')
+    end
+    it 'provides Flask-SSLify plugin' do
+      expect(chef_run).to run_execute('pip install Flask-SSLify==0.1.4')
+    end
 end
-
-
-    #
-    #
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install Flask==0.10.1'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install Jinja2==2.7.3'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install MarkupSafe==0.23'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install Werkzeug==0.9.6'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install gnureadline==6.3.3'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install itsdangerous==0.24'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install rauth==0.7.0'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install requests==2.3.0'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install gunicorn==18.0'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install Flask-SSLify==0.1.4'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install pytest==2.5.2'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install pytest-cov==1.6'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install betamax==0.4.0'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install flake8==2.1.0'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install pep8==1.5.6'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install pyflakes==0.8.1'
-    # end
-    #
-    # execute 'python-pip install plugins' do
-    #   command 'pip install coveralls==0.4.2'
-    # end
-    #
-    #
-    #
+end

@@ -57,6 +57,11 @@ execute 'python-pip install plugins' do
 end
 
 execute 'python-pip install plugins' do
+  command 'pip install wsgiref==0.1.2'
+end
+
+
+execute 'python-pip install plugins' do
   command 'pip install gunicorn==18.0'
 end
 
