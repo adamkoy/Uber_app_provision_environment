@@ -20,10 +20,10 @@ describe 'python::default' do
     end
 
     it 'provides Flask' do
-        expect(plugin).to install_attribute('Flask')
-    end
+        expect(chef_run).to run_execute('pip install Flask==0.10.1')
     end
   end
+end
 
 
     #

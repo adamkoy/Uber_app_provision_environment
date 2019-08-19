@@ -62,12 +62,12 @@ end
 
 describe pip('wsgiref') do
   it { should be_installed }
-  its('version') { should eq 'wsgiref' }
+  its('version') { should eq '0.1.2' }
 end
 
 describe pip('gunicorn') do
   it { should be_installed }
-  its('version') { should eq 'wsgiref' }
+  its('version') { should eq '18.0' }
 end
 describe pip('Flask-SSLify') do
   it { should be_installed }
