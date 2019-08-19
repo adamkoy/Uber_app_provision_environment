@@ -1,0 +1,4 @@
+source 'https://supermarket.chef.io'
+
+cookbook 'nginx', git: 'https://github.com/adamkoy/nginx_cookbook_uber_app'
+cookbook 'python', git: 'https://github.com/adamkoy/python_cookbook_uber_app'
