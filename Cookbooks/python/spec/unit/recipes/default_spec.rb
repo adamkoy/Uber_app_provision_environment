@@ -19,22 +19,12 @@ describe 'python::default' do
       expect(chef_run).to install_package('python')
     end
 
-
-    it 'installs the package python' do
-      expect(chef_run).to install_package('python-pip')
+    it 'provides Flask' do
+        expect(plugin).to install_attribute('Flask')
     end
-
-    it 'installs the package python' do
-      expect(chef_run).to install_package('libncurses5-dev')
     end
+  end
 
-    it 'installs the dependency for gnureadline' do
-      expect(chef_run).to install_package('libffi-dev')
-    end
-
-    it 'installs the dependency for gnureadline' do
-      expect(chef_run).to install_service('Flask').with (version '0.10.1')
-    end
 
     #
     #
@@ -109,7 +99,3 @@ describe 'python::default' do
     #
     #
     #
-
-
-  end
-end

@@ -19,3 +19,9 @@ end
 describe package('python') do
   it { should be_installed }
 end
+
+
+describe pip('Flask') do
+  it { should be_installed }
+  its('version') { should eq '0.10.1' }
+end
